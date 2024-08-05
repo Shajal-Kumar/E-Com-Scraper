@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup as bs
 import requests as req
-from sources import *
+from sources import get_amazon, get_flipkart, get_ebay, get_shopclues
 import streamlit as st
 
 
