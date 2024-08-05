@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup as bs
 import requests as req
-import sources as sou
+from sources import *
 import streamlit as st
 
 
@@ -10,16 +10,16 @@ def get_item_details(url):
     soup = bs(html_text.text, 'lxml')
     # print(soup.prettify().text)
     if 'amazon' in url:
-        sou.get_amazon(soup)
+        get_amazon(soup)
     
     elif 'flipkart' in url:
-        sou.get_flipkart(soup)
+        get_flipkart(soup)
     
     elif 'ebay' in url:
-        sou.get_ebay(soup)
+        get_ebay(soup)
 
     elif 'shopclues' in url:
-        sou.get_shopclues(soup)
+        get_shopclues(soup)
 # get_item_details(link)
 
 def perform_comparison(url_1, url_2):
