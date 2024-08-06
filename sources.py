@@ -35,7 +35,9 @@ def get_amazon(soup):
     st.subheader(":yellow ABOUT THIS PRODUCT")
     st.divider()
     for i in about:
-        st.write(f':orange[{i.text.strip().replace(',Äî', '--')}]')
+        point = i.text.strip()
+        # st.write(f":orange[{point.replace(",Äî", "--")}]")
+        st.write(f":orange[{point}]")
         st.divider()
 
 def get_flipkart(soup):
