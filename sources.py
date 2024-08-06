@@ -37,7 +37,7 @@ def get_amazon(soup):
     for i in about:
         point = i.text.strip()
         # st.write(f":orange[{point.replace(",Äî", "--")}]")
-        st.write(f":orange[{point}]")
+        st.write(f":orange[{point.replace(",Äî", "--")}]")
         st.divider()
 
 def get_flipkart(soup):
